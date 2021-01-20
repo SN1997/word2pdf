@@ -4,6 +4,7 @@ import com.zcsf.word2pdf.common.utils.HtmlUtil;
 import com.zcsf.word2pdf.common.utils.ReplaceUtil;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,33 +19,12 @@ import java.util.Map;
  * @version 1.0
  * @date 2020/5/9 9:38 上午
  */
-@RestController
+@Controller
 public class MakeWordTest {
-
-//    public static void main(String[] args) throws Exception {
-//        // 需要替换的文档路径
-//        String mainFilePath = "/Users/zhangxincheng/file/zcsfDoc/springboot-jwt/jfyxxy.docx";
-//        File mainFile = new File(mainFilePath);
-//        InputStream in = new FileInputStream(mainFile);
-//        OPCPackage srcPackage = OPCPackage.open(in);
-//        XWPFDocument doc = new XWPFDocument(srcPackage);
-//        // 替换文档中段落的占位符
-//        ReplaceUtil.replaceInPara(doc,createParaParamsMap());
-//        // 替换文档中表格里面的占位符
-//        ReplaceUtil.replaceTable(doc,createTableParamsMap());
-//        // 插入富文本框到文本中指定的占位符
-////        XWPFDocumentUtil.wordInsertRitchText(doc,insertRitch(),"这里是水印zxc");
-//        // 插入富文本后Word的输出目录
-//        OutputStream dest = new FileOutputStream("/Users/zhangxincheng/file/zcsfDoc/springboot-jwt/jfyxxy1.docx");
-//        doc.write(dest);
-//        // 关闭流
-//        HtmlUtil.closeStream(in,dest);
-//    }
-
-
 
     @GetMapping("/word2word")
     public void word2word() throws Exception{
+        System.out.println(1);
         // 需要替换的文档路径
         String mainFilePath = "/Users/zhangxincheng/file/zcsfDoc/springboot-jwt/jfyxxy.docx";
         File mainFile = new File(mainFilePath);

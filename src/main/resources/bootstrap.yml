@@ -1,0 +1,68 @@
+#server:
+#  port: 8188
+#
+#package:
+#  type: @project.packaging@
+#
+#zcsf:
+#  lic: @zcsf.lic@
+#  privKey: @zcsf.privKey@
+#
+#spring:
+#  application:
+#    name: web-server
+#  cloud:
+#    nacos:
+#      config:
+#        file-extension: yml
+#        server-addr: @nacos.config.host@
+#        namespace: @nacos.config.namespace@
+#  main:
+#    allow-bean-definition-overriding: true
+#  thymeleaf:
+#      prefix=: /templates/
+#feign:
+#  client:
+#    config:
+#      crm-service:
+#        requestInterceptors:
+#          - com.zjyc.zcsf.config.feign.FeignApiConfiguration
+#      manage-service:
+#        requestInterceptors:
+#          - com.zjyc.zcsf.config.feign.FeignApiConfiguration
+#      auth-service:
+#        requestInterceptors:
+#          - com.zjyc.zcsf.config.feign.FeignAuthApiConfiguration
+#      ec-service:
+#        requestInterceptors:
+#          - com.zjyc.zcsf.config.feign.FeignApiConfiguration
+#      scb-service:
+#        requestInterceptors:
+#          - com.zjyc.zcsf.config.feign.FeignApiConfiguration
+#login:
+#  grantType: password
+#  scope: web
+#  refreshToken: refresh_token
+#  authorization: Basic enNjZnQ6enNjZnQ=
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*" #暴露所有节点
+#    #        exclude: env  #指定节点不暴露
+#    health:
+#      mail:
+#        enabled: false
+#      elasticsearch:
+#        enabled: false
+#      elasticsearchRest:
+#        enabled: false
+#  endpoint:
+#    logfile:
+#      external-file: /export/log/zcsf-app/zcsf-app_detail.log
+#    health:
+#      show-details: ALWAYS  #显示详细信息
+##凭证融资签章平台方社会统一代码
+#platformCode: 66666123
+#fileType: xls,xlsx,doc,docx,txt,ppt,pptx,pdf,jpg,jpeg,gif,png,zip,rar
