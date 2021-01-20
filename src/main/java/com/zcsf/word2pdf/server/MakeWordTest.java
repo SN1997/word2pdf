@@ -17,7 +17,30 @@ import java.util.Map;
  * @date 2020/5/9 9:38 上午
  */
 public class MakeWordTest {
-    public static void main(String[] args) throws Exception {
+
+//    public static void main(String[] args) throws Exception {
+//        // 需要替换的文档路径
+//        String mainFilePath = "/Users/zhangxincheng/file/zcsfDoc/springboot-jwt/jfyxxy.docx";
+//        File mainFile = new File(mainFilePath);
+//        InputStream in = new FileInputStream(mainFile);
+//        OPCPackage srcPackage = OPCPackage.open(in);
+//        XWPFDocument doc = new XWPFDocument(srcPackage);
+//        // 替换文档中段落的占位符
+//        ReplaceUtil.replaceInPara(doc,createParaParamsMap());
+//        // 替换文档中表格里面的占位符
+//        ReplaceUtil.replaceTable(doc,createTableParamsMap());
+//        // 插入富文本框到文本中指定的占位符
+////        XWPFDocumentUtil.wordInsertRitchText(doc,insertRitch(),"这里是水印zxc");
+//        // 插入富文本后Word的输出目录
+//        OutputStream dest = new FileOutputStream("/Users/zhangxincheng/file/zcsfDoc/springboot-jwt/jfyxxy1.docx");
+//        doc.write(dest);
+//        // 关闭流
+//        HtmlUtil.closeStream(in,dest);
+//    }
+
+
+
+    public void word2word() throws Exception{
         // 需要替换的文档路径
         String mainFilePath = "/Users/zhangxincheng/file/zcsfDoc/springboot-jwt/jfyxxy.docx";
         File mainFile = new File(mainFilePath);
